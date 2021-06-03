@@ -1,0 +1,13 @@
+$rosa: #fc758c;
+$rosa-hover: #f3536e;
+$gris: #707070;
+
+/*Familia fuente*/
+$fuente: 'Questrial' ;
+
+@mixin flexBox{
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}

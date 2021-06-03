@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Questrial';
+  src:
+    url('../fonts/Questrial-Regular.eot');
+  src:
+    url('../fonts/Questrial-Regular.eot?#iefix') format('embedded-opentype'),
+    url("../fonts/Questrial-Regular.otf") format("opentype"),
+    url("../fonts/Questrial-Regular.svg") format("svg"),
+    url("../fonts/Questrial-Regular.woff2") format("woff2"),
+    url('../fonts/Questrial-Regular.woff') format('woff'),
+    url('../fonts/Questrial-Regular.ttf') format('truetype');
+}

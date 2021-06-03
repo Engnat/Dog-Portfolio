@@ -1,0 +1,442 @@
+@import "helpers/fonts"
+@import "helpers/normalize"
+@import "helpers/bourbon"
+@import "helpers/variables"
+@import "helpers/menu-mobile"
+
+
+*
+  font-family: $fuente
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+
+html
+  overflow-x: hidden
+
+html, body
+  width: 100%
+  height: 100%
+
+a
+  text-decoration: none
+
+button
+  border: 0
+  cursor: pointer
+  -webkit-appearance: none
+
+header
+  background-color: #fff
+  height: 100px
+  position: fixed
+  width: 100%
+  z-index: 1
+  nav
+    .contenedor-logo
+      height: 60px
+      a
+        div
+          @include flexBox
+          justify-content: flex-start
+          img
+            margin: 15px
+            width: 10%
+          .texto-logo
+            h1
+              @include flexBox
+              align-items: flex-start
+              color: #c3d0d8
+              flex-flow: column nowrap
+              font-family: $fuente
+              font-size: 10px
+              letter-spacing: 2px
+              justify-content: flex-start
+              b
+                color: $gris
+                font-weight: bold
+                font-size: 20px
+                letter-spacing: 5px
+    .contenedor-buscador
+      @include flexBox
+      justify-content: center
+      height: 40px
+      input
+        border: 1px solid $rosa
+        border-radius: 50px
+        height: 30px
+        margin-right: 5px
+        width: 85%
+section
+  float: left
+  height: auto
+  position: relative
+  width: 100%
+  .hero-banner
+    background-color: $rosa
+    color: #fff
+    height: calc(100vh - 250px)
+    margin-top: 100px
+    position: relative
+    h2
+      letter-spacing: 5px
+      font-weight: bold
+      font-size: 20px
+      margin-bottom: 15px
+      text-align: center
+    p
+      font-size: 14px
+      margin-bottom: 15px
+      text-align: center
+    button
+      background-color: #fff
+      color: $rosa
+      display: block
+      font-size: 14px
+      height: 40px
+      margin: 0 auto
+      width: 150px
+    div
+      left: 50%
+      margin: 0 auto
+      position: absolute
+      top: 50%
+      transform: translate(-50% , -50%)
+      width: 90%
+
+  .galeria
+    margin: 40px auto 20px
+    .botones-organizadores
+      @include flexBox
+      justify-content: center
+      span
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
+        display: block
+        height: 20px
+        margin: 5px
+        width: 20px
+      .btn-bloques
+        background-image: url("../images/icono-bloque.svg")
+      .btn-lista
+        background-image: url("../images/icono-columna.svg")
+    nav
+      @include flexBox
+      flex-flow: row wrap
+      justify-content: center
+      margin: 40px auto
+      width: 90%
+      a
+        font-size: 14px
+        padding: 5px 30px
+        transition-duration: 0.5s
+      a.active
+        color: #fff
+        background-color: $rosa-hover
+    #grilla-portafolio
+      column-count: 1
+      margin: 0 auto
+      max-width: 960px
+      width: 90%
+      .contenedorImg
+        height: 100%
+        object-fit: cover
+        width: 100%
+        .imagen
+          height: 100%
+          position: relative
+          width: 100%
+          .info-imagen
+            background-color: $rosa
+            height: 100%
+            position: absolute
+            width: 100%
+            div
+              color: #fff
+              left: 50%
+              position: absolute
+              top: 50%
+              transform: translate(-50% , -50%)
+              text-align: center
+              width: 90%
+              h3
+                font-size: 10px
+                letter-spacing: 5px
+              hr
+                border-bottom: 1px solid #fff
+                border-top: 0
+                margin: 10px auto
+                width: 100%
+              p
+                font-size: 10px
+                letter-spacing: 4px
+          .ocultarTarjeta
+            display: none
+          .mostrarTarjeta
+            display: block
+            background-color: $rosa
+            height: 100%
+            position: absolute
+            width: 100%
+          img
+            height: 100%
+            object-fit: cover
+            width: 100%
+    .btn-ver-mas
+      background-color: $rosa
+      color: #fff
+      display: block
+      font-size: 14px
+      height: 40px
+      margin: 30px auto
+      width: 150px
+
+
+footer
+  clear: both
+  float: left
+  height: 120px
+  padding: 20px
+  width: 100%
+  div
+    p
+      color: #c3d0d8
+      font-size: 12px
+      letter-spacing: 3px
+      text-align: center
+      b
+        color: $rosa
+        font-weight: normal
+  .redes-sociales
+    @include flexBox
+    justify-content: center
+    margin: 20px auto
+    width: 90%
+    a
+      margin: 10px
+
+
+
+
+@media all and (min-width: 360px)
+  header
+    nav
+      .contenedor-logo
+        a
+          div
+            img
+              margin: 12px
+  section
+    .hero-banner
+      h2
+        font-size: 24px
+      p
+        font-size: 16px
+
+@media all and (min-width: 375px)
+
+
+@media all and (min-width: 410px)
+  header
+    nav
+      .contenedor-logo
+        a
+          div
+            img
+              margin: 9px
+
+@media all and (min-width: 480px)
+  header
+    nav
+      .contenedor-logo
+        width: 50%
+  section
+    .hero-banner
+      height: 80vh
+    .galeria
+      #grilla-portafolio
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: 200px 300px 400px
+        grid-column-gap: 5px
+        grid-row-gap: 5px
+        grid-auto-flow: dense
+
+@media all and (min-width: 568px)
+
+
+//TABLETS
+@media all and (min-width: 730px)
+  .desktop
+    display: none
+  .tablet
+    display: block
+  header
+    nav
+      .contenedor-logo
+        a
+          div
+            img
+              margin: 10px
+  section
+    .hero-banner
+      height: 40vh
+    .galeria
+      #grilla-portafolio
+        grid-template-columns: repeat(3, 1fr)
+        .contenedorImg
+          &:nth-child(4)
+            grid-row-start: 2
+            grid-row-end: 4
+            grid-column-start: 2
+          &:nth-child(10)
+            grid-row-start: 5
+            grid-row-end: 3
+            grid-column-start: 1
+          &:nth-child(13)
+            grid-row-start: 5
+            grid-row-end: 6
+            grid-column-start: 1
+          &:nth-child(14)
+            grid-row-start: 5
+            grid-row-end: 8
+            grid-column-start: 3
+          &:nth-child(17)
+            grid-row-start: 6
+            grid-row-end: 9
+            grid-column-start: 1
+          &:nth-child(18)
+            grid-row-start: 8
+            grid-row-end: 10
+            grid-column-start: 3
+          &:nth-child(22)
+            grid-row-start: 10
+            grid-row-end: 12
+            grid-column-start: 2
+          &:nth-child(26)
+            grid-row-start: 12
+            grid-row-end: 14
+            grid-column-start: 1
+          .imagen
+            margin-bottom: 15px
+            .info-imagen
+              div
+                width: 70%
+                p , h3
+                  font-size: 12px
+
+
+
+@media all and (min-width: 1024px)
+  .desktop
+    display: block
+  .tablet , .menu-mobile , .nav-toggle
+    display: none
+  header
+    height: 60px
+    position: relative
+    nav
+      @include flexBox
+      margin: 0 auto
+      width: 90%
+      .contenedor-logo
+        width: 25%
+        a
+          div
+            img
+              margin: 15px
+            .texto-logo
+              h1
+                font-size: 9px
+                b
+                  font-size: 16px
+      .contenedor-menu
+        width: auto
+        #navM
+          display: block
+          height: 60px
+          margin: 0
+          position: initial
+          padding: 6px 0
+          right: auto
+          width: 100%
+          z-index: 7
+          a
+            font-size: 14px
+      .contenedor-buscador
+        width: auto
+        input
+          display: none
+  section
+    .hero-banner
+      margin-top: 0
+      height: 60vh
+      p
+        font-size: 14px
+        margin: 0 auto 15px
+        width: 80%
+      div
+        width: 50%
+    .galeria
+      nav
+        width: 70%
+      #grilla-portafolio
+        overflow: hidden
+        width: 70%
+
+
+//DESKTOP
+@media all and (min-width:1124px)
+  header
+    nav
+      .contenedor-logo
+        a
+          div
+            img
+              margin: 13px
+      .contenedor-menu
+        margin-left: 273px
+  section
+    .hero-banner
+      h2
+        font-size: 30px
+      p
+        width: 55%
+
+
+
+
+//DESKTOP Hi-Res
+@media all and (min-width:1440px)
+  header
+    nav
+      .contenedor-menu
+        margin-left: 367px
+        .contenedor-logo
+          a
+            div
+              img
+                margin: 9px
+
+@media all and (min-width:1600px)
+  header
+    nav
+      .contenedor-logo
+        a
+          div
+            img
+              margin: 9px
+      .contenedor-menu
+        margin-left: 477px
+
+@media all and (min-width:1900px)
+  header
+    nav
+      .contenedor-logo
+        a
+          div
+            img
+              margin: 6px
+      .contenedor-menu
+        margin-left: 627px
